@@ -9,6 +9,8 @@ end
 
 def max_2_sum arr
   # YOUR CODE HERE
+  array=arr.sort
+  sum(array.last(2))
 end
 
 def sum_to_n? arr, n
