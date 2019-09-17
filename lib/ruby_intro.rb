@@ -49,4 +49,25 @@ end
 
 class BookInStock
 # YOUR CODE HERE
+  def initialize (isbn,price)
+    raise ArgumentError.new("invalid isbn") if isbn.empty? 
+    raise ArgumentError.new("invalid price") if price <= 0 
+    @isbn = isbn
+    @price = price
+  end
+  def isbn
+    @isbn
+  end
+  def price
+    @price
+  end
+  def isbn=(i)
+    @isbn = i
+  end
+  def price=(p)
+    @price = p
+  end
+  def price_as_string
+    "$" << ('%.2f' %price).to_s
+  end
 end
